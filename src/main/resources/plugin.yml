@@ -1,0 +1,39 @@
+name: Epilog
+main: ch.heap.bukkit.epilog.Epilog
+version: 0.1.3-dev
+author: stepmuel
+website: http://heapcraft.net/
+
+commands:
+   el:
+      description: Change Epilog settings.
+      usage: Unknown command. try /<command> help
+
+permissions:
+    epilog.*:
+        description: Gives all epilog permissions
+        children:
+            epilog.access: true
+            epilog.manage: true
+            epilog.update: true
+            epilog.install: true
+            epilog.notifications: true
+            epilog.loggingInfo: true
+    epilog.access:
+        description: Allows to create access tokens for the admin interface
+        default: op
+    epilog.manage:
+        description: Allows to change settings
+        default: op
+    epilog.update:
+        description: Allows to update epilog and related plugins
+        default: op
+    epilog.install:
+        description: Allows to install related plugins (not yet implemented)
+        default: op
+    epilog.notifications:
+        description: Allows to see (update-) notifications
+        default: op
+    epilog.loggingInfo:
+        description: Informs players that their gameplay is logged
+        default: true
